@@ -1,0 +1,17 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: ai-service
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY:demo}
+      model-name: gpt-4o-mini
+      log-requests: true
+      log-responses: true
+    embedding-model:
+      api-key: ${OPENAI_API_KEY:demo}
+      model-name: text-embedding-3-small
